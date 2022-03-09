@@ -39,7 +39,7 @@ public class ReadCSV {
     }
     public static List<Map<?, ?>> readObjectsFromCsv(File file) throws IOException {
         CsvSchema bootstrap = CsvSchema.emptySchema().withHeader();
-        CsvMapper csvMapper = new CsvMapper();git add .
+        CsvMapper csvMapper = new CsvMapper();
         MappingIterator<Map<?, ?>> mappingIterator = csvMapper.reader(Map.class).with(bootstrap).readValues(file);
 
         return mappingIterator.readAll();
